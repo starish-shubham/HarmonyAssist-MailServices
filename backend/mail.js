@@ -2,9 +2,15 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
-
 // Import cors middleware
 const cors = require('cors');
+
+const corsOptions = {
+    origin: 'https://github.com/starish-shubham/HarmonyAssist-MailServices/blob/master/frontend/index.html', // Allow requests from this origin
+    methods: 'GET,POST,PUT,DELETE', // Allow only specified methods
+};
+
+app.use(cors(corsOptions));
 
 const app = express();
 const port = process.env.PORT || 3000;
