@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Sender</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- <link rel="shortcut icon" href="https://in.images.search.yahoo.com/images/view;_ylt=AwrKFyrH611mV_84dhG9HAx.;_ylu=c2VjA3NyBHNsawNpbWcEb2lkAzg3N2M4NjQ4ZGIxYWZjNjQ5ZmZjN2U1ZTU3ZDRmN2ViBGdwb3MDNQRpdANiaW5n?back=https%3A%2F%2Fin.images.search.yahoo.com%2Fsearch%2Fimages%3Fp%3Dmail%2Bicon%26type%3DE211IN885G91648%26fr%3Dmcafee%26fr2%3Dpiv-web%26tab%3Dorganic%26ri%3D5&w=1024&h=1024&imgurl=purepng.com%2Fpublic%2Fuploads%2Flarge%2Fpurepng.com-mail-iconsymbolsiconsapple-iosiosios-8-iconsios-8-721522596075clftr.png&rurl=https%3A%2F%2Fpurepng.com%2Fphoto%2F3411%2Fsymbols-mail-icon&size=47.9KB&p=mail+icon&oid=877c8648db1afc649ffc7e5e57d4f7eb&fr2=piv-web&fr=mcafee&tt=Mail+Icon+PNG+Image+-+PurePNG+%7C+Free+transparent+CC0+PNG+Image+Library&b=0&ni=21&no=5&ts=&tab=organic&sigr=sS7lusQ9gLia&sigb=7584ICMSE3QZ&sigi=NEysLEPKylaM&sigt=0Qy1x2JcRSTK&.crumb=.Xl8KnvWDCB&fr=mcafee&fr2=piv-web&type=E211IN885G91648" type="image/x-icon"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      body {
+        height: 100vh;
+        width: 100%;
+        background-color: #f8f9fa;
+      }
+
+      .container {
+        margin-top: 50px;
+        max-width: 600px;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      #instructionButton {
+        border-radius: 50%;
+        width: 60px; /* Adjust the width and height as needed */
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #dedbda;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">Send Email</h1>
+      <form id="emailForm">
+        <div class="form-group">
+          <label for="senderemail">Sender Email:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="senderemail"
+            name="senderemail"
+            placeholder="Sender Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="recieveremail">Recipient Email:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="recieveremail"
+            name="recieveremail"
+            placeholder="Recipient Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="subject"
+            name="subject"
+            placeholder="Subject"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea
+            class="form-control"
+            id="message"
+            name="message"
+            rows="3"
+            placeholder="Message"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send</button>
+        <!-- <button id="instructionButton" class="btn btn-warning text-white btn-block">Get Voice Instructions</button> -->
+        <button id="instructionButton" class="btn fa-xl mx-auto mt-3 mb-3">
+          <i class="fas fa-microphone" style="color: #0663ef"></i> 
+        </button>
+      </form>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="mailService.js"></script>
+  </body>
+</html>
